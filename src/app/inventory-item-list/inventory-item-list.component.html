@@ -1,0 +1,39 @@
+ <div class ="container-fluid">
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>Inventory Number</th>
+                <th>Cost Center</th>
+                <th>Description</th>
+                <th>Serial Number</th>
+                <th>Supplier</th>
+                <th>User</th>
+                <th>Location</th>
+                <th>Room</th>
+                <th>Date</th>
+                <th>Value</th>
+                <th>Residual Value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let inventoryItem of inventoryItems">
+                <td>{{inventoryItem.inventoryNumber}}</td>
+                <td>{{inventoryItem.costCenter}}</td>
+                <td>{{inventoryItem.description}}</td>
+                <td>{{inventoryItem.serialNumber}}</td>
+                <td>{{inventoryItem.supplier}}</td>
+                <td>{{inventoryItem.user}}</td>
+                <td>{{inventoryItem.location}}</td>
+                <td>{{inventoryItem.room}}</td>
+                <td>{{inventoryItem.date}}</td>
+                <td>{{inventoryItem.value}}</td>
+                <td>{{inventoryItem.residualValue}}</td>
+                <td>
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteInventoryItem(inventoryItem.inventoryNumber)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ </div>

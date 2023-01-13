@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+    <div class="card" style="width: 50%;margin: 10px auto;">
+        <div class="card-header">
+            Register new Inventory Item
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="inventoryNumber">InventoryNumber</label>
+            <input [(ngModel)]="inventoryItem.inventoryNumber" id="inventoryNumber" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="costCenter">CostCenter</label>
+            <input [(ngModel)]="inventoryItem.costCenter" id="costCenter" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input [(ngModel)]="inventoryItem.description" id="description" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="serialNumber">SerialNumber</label>
+            <input [(ngModel)]="inventoryItem.serialNumber" id="serialNumber" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="user">User</label>
+            <input [(ngModel)]="inventoryItem.user" id="user" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="supplier">Supplier</label>
+            <input [(ngModel)]="inventoryItem.supplier" id="supplier" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input [(ngModel)]="inventoryItem.location" id="location" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="room">Room</label>
+            <input [(ngModel)]="inventoryItem.room" id="room" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input [(ngModel)]="inventoryItem.date" id="date" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="value">Value</label>
+            <input [(ngModel)]="inventoryItem.value" id="value" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <label for="residualValue">residualValue</label>
+            <input [(ngModel)]="inventoryItem.residualValue" id="residualValue" class="form-control" type="text" name=""> 
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" (click)="registerInventoryItem()">Register</button>
+        </div>
+    </div>
+</div>

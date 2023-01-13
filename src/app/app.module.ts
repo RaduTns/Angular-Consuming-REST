@@ -1,18 +1,31 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InventoryItemListComponent } from './inventory-item-list/inventory-item-list.component';
+import { InventoryItemService } from './models/inventory-item.service';
+import { NewInventoryItemComponent } from './new-inventory-item/new-inventory-item.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InventoryItemListComponent,
+    NewInventoryItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    InventoryItemService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
