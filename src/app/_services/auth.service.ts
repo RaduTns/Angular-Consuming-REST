@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { InventoryItemService } from '../models/inventory-item.service';
 
 const AUTH_API = 'http://localhost:8080/realms/KeycloakIntegrationTomcat/protocol/openid-connect/token';
 
@@ -9,10 +10,11 @@ const AUTH_API = 'http://localhost:8080/realms/KeycloakIntegrationTomcat/protoco
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
+  constructor(private inventoryItemService: InventoryItemService) { }
 
-  retrieveToken(body: any): Observable<any> {
-    return this.http.post(AUTH_API, body);
+  retrieveToken() {
+    return this.inventoryItemService.getTestToken()
+    
   }
 
 }
