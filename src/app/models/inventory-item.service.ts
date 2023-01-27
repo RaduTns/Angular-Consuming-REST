@@ -19,7 +19,7 @@ export class InventoryItemService {
     await firstValueFrom( this.http.post("http://localhost:8080/realms/KeycloakIntegrationTomcat/protocol/openid-connect/token", body)).then((res:any)=>{
     console.log(res.access_token)  
     this.testToken = res.access_token
-    return res.access_token
+    // return res.access_token
     })
    
   }

@@ -14,7 +14,6 @@ export class AuthService {
 
   retrieveToken() {
     return this.inventoryItemService.getTestToken()
-    
   }
 
 }

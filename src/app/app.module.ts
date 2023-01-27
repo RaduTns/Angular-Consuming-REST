@@ -9,6 +9,8 @@ import { InventoryItemService } from './models/inventory-item.service';
 import { NewInventoryItemComponent } from './new-inventory-item/new-inventory-item.component';
 import { FormsModule } from '@angular/forms';
 import { TokenInterceptor } from './_helpers/auth.interceptor';
+import { JwtHelperService, JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,13 @@ import { TokenInterceptor } from './_helpers/auth.interceptor';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    JwtModule.forRoot({
+      config: {
+      
+      },
+    }),
+
+
   ],
   providers: [
     InventoryItemService,{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

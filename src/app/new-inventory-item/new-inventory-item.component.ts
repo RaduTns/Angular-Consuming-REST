@@ -11,10 +11,6 @@ export class NewInventoryItemComponent implements OnInit {
 
   inventoryItem = new InventoryItem();
   constructor(private inventoryItemService: InventoryItemService) { }
-  params = new HttpParams()
-    .set("client_id", "inventory-client")
-    .set("client_secret", "G5rTT2Pu8YDqjmc86cN64nY1x79V8EAX")
-    .set("grant_type", "client_credentials")
 
   ngOnInit() {
     
